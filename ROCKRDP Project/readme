@@ -28,3 +28,36 @@ The last prompt will ask you to press either '0' or '1' depending on your accoun
 
 After pressing ENTER, your new RDP file will be opened and instantly opened. You will have to authenticate within the RDP file with your CyberArk Credentials
 and when you choose to close the window the batch file will delete the RDP file.
+
+
+##########################################################
+#¡Importante! Este script me inspiró a hacerlo una publicación de Reddit que no he tenido la suerte de encontrar de nuevo ...
+# ¡Importante2! Esto requiere una comprensión básica de CyberArk para que no intentes trucos de magia con esto ... Esta es una herramienta útil para evitar
+timeouts de PVWA, apertura de ventanas de cmd, etc. Sugiero que solo las personas que pasan mucho tiempo iniciando nuevas conexiones a diario lo usen.
+
+# Para configurar esto, primero debes descargar el archivo y editarlo:
+
+En el # Paso 1, debes reemplazar los campos DOMAIN e IPADDRESS con el dominio de tu empresa (el que está utilizando para cargar su
+cuentas en CyberArk) y el IP de su servidor PSM (o LB) en el que normalmente iniciaría una sesión de proxy RDP.
+Este paso habrá dejado configurado las variables estáticas para que pueda iniciar el script diariamente. Después
+editando estas dos variables, guarda el archivo como .bat (archivo por lotes) ... ¡Listo para comenzar!
+
+Con un doble clic obtendremos el siguiente mensaje en un cmd.
+
+   ____________________________________
+   \\\\\\\\\\\\\\\\\\//////////////////
+                    ROCKRDP v1
+   //////////////////\\\\\\\\\\\\\\\\\\
+   ------------------------------------
+Introduce el servidor al que te gustaria conectar: criticalbox
+Que cuenta deseas utilizar: unixadmin
+Que componente deseas utilizar [Ex; PSM-RDP, PSM-SSH, ...]:PSM-SSH
+
+Para lo cual criticalbox, unixadmin y PSM-SSH son la entrada que elegí para sesion rdp.
+Ten en cuenta que criticalbox debe coincidir con el valor almacenado para el "account property" de dirección IP en CyberArk. Lo mismo sucede con unixadmin, que debe coincidir con la propiedad de la cuenta de nombre de usuario.
+Finalmente, PSM-SSH debería estar disponible como Connection Component para la plataforma asignada a la cuenta unixadmin @ criticalbox.
+
+El último mensaje le pedirá que presione '0' o '1' dependiendo de su cuenta, 0 si es una cuenta de dominio o una cuenta local, 1.
+
+Después de presionar ENTER, tu nuevo archivo RDP se gaurdará y abrirá instantáneamente. Debes autenticarse dentro del archivo RDP con sus credenciales de CyberArk
+y cuando decidas cerrar la ventana, el archivo por lotes eliminará el archivo RDP.
