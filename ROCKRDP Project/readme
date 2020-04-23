@@ -1,5 +1,6 @@
 #Important! This was inspired by a Reddit post which I haven't had any luck finding again...
-
+#Important2! This requires some basic understanding of CyberArk for you to not try magic tricks with this... This is an useful tool to avoid 
+PVWA timeouts, opening cmd windows etc... I suggest that only people who spend a lot of time starting new connections on a daily basis use it. 
 
 #To set this up you will first need to download the file and edit it:
 
@@ -8,11 +9,22 @@ accounts in CyberArk) and your PSM Server IP (or LB) to which you would inititia
 This step will have have set the static variables for you to launch the script on a daily basis. After 
 editing these two variables, save the file as .bat (batch file)... Ready to go!
 
-With a double click we will get the followin prompt on a cmd.
+With a double click we will get the following prompt on a cmd.
 
    ____________________________________
    \\\\\\\\\\\\\\\\\\//////////////////
                     ROCKRDP v1
    //////////////////\\\\\\\\\\\\\\\\\\
    ------------------------------------
-Introduce el servidor al que te gustaria conectar:
+Specify a target server: criticalbox
+Target account to be used: unixadmin
+What component should I use... [Ex; PSM-RDP, PSM-SSH, ...]:PSM-SSH
+
+For which criticalbox, unixadmin and PSM-SSH reflects the input I chose for my rdp connection. 
+Notice that criticalbox should match the value stored for IP Address account property in CyberArk. Same happens with unixadmin which should match the username account property.
+Finally, PSM-SSH should be available as connection component for the platform assigned to unixadmin@criticalbox account.
+
+The last prompt will ask you to press either '0' or '1' depending on your account, 0 if it is a domain account or a local account, 1. 
+
+After pressing ENTER, your new RDP file will be opened and instantly opened. You will have to authenticate within the RDP file with your CyberArk Credentials
+and when you choose to close the window the batch file will delete the RDP file.
