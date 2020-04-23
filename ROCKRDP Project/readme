@@ -1,3 +1,6 @@
+=============================================================ENGLISH DOC. =============================================================
+
+
 #Important! This was inspired by a Reddit post which I haven't had any luck finding again...
 #Important2! This requires some basic understanding of CyberArk for you to not try magic tricks with this... This is an useful tool to avoid 
 PVWA timeouts, opening cmd windows etc... I suggest that only people who spend a lot of time starting new connections on a daily basis use it. 
@@ -29,8 +32,7 @@ The last prompt will ask you to press either '0' or '1' depending on your accoun
 After pressing ENTER, your new RDP file will be opened and instantly opened. You will have to authenticate within the RDP file with your CyberArk Credentials
 and when you choose to close the window the batch file will delete the RDP file.
 
-
-##########################################################
+=============================================================SPANISH DOC. =============================================================
 #¡Importante! Este script me inspiró a hacerlo una publicación de Reddit que no he tenido la suerte de encontrar de nuevo ...
 # ¡Importante2! Esto requiere una comprensión básica de CyberArk para que no intentes trucos de magia con esto ... Esta es una herramienta útil para evitar
 timeouts de PVWA, apertura de ventanas de cmd, etc. Sugiero que solo las personas que pasan mucho tiempo iniciando nuevas conexiones a diario lo usen.
