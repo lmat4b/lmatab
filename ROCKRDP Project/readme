@@ -1,2 +1,18 @@
-REM This was inspired by a Reddit post which I haven't had any luck finding again...
-REM 
+#Important! This was inspired by a Reddit post which I haven't had any luck finding again...
+
+
+#To set this up you will first need to download the file and edit it:
+
+In #Step 1, you will have to replace the DOMAIN and IPADDRESS fields with your company domain (the one you are using to upload your 
+accounts in CyberArk) and your PSM Server IP (or LB) to which you would inititiate an RDP Proxy session usually.
+This step will have have set the static variables for you to launch the script on a daily basis. After 
+editing these two variables, save the file as .bat (batch file)... Ready to go!
+
+With a double click we will get the followin prompt on a cmd.
+
+   ____________________________________
+   \\\\\\\\\\\\\\\\\\//////////////////
+                    ROCKRDP v1
+   //////////////////\\\\\\\\\\\\\\\\\\
+   ------------------------------------
+Introduce el servidor al que te gustaria conectar:
