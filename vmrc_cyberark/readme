@@ -1,7 +1,24 @@
-=======================================================< NOTE >============================================================
+======================================================< NOTE >========================================================
 Find more for this custom connection component for VMWare Remote Console and CyberArk in the following URL: https://wp.me/pbTwYg-35
  
- 
+This connection component allows you to create a secured and isolated session to a single virtual machine within vCenter Server
+using CyberArk. This is accomplished by using VMWare Remote Console on an AutoIt connection component for the PSM module. To 
+select the virtual machine we would like to connect to, we will use its MoRef ID (check VMWare References section).
+
+In this diagram (find it attached as .png file), Dwight connects to the Virtual Machines he desires and is authenticated against the vCenter using the
+Logon Account credentials. He doesn't necessarily need to know the Logon Account password as we can uncheck the "Retrieve Password" permission for Dwight.
+
+====================================================< CONTRIBUTE >===================================================
+Collaboration is needed…
+
+I would like to improve the script in different ways:
+
+Adding any code that improves its efficiency.
+Capable of authenticating against the target system.
+Separately from this process, I am working on a PACLI script that checks whether MoID for X account has changed. This script would be run as a scheduled job.
+
+... ideas are welcomed!
+
 =====================================================< RESOURCES >======================================================
 https://kb.vmware.com/s/article/1017126
 https://www.vmwarebits.com/content/tools-correlate-moid-and-inventory-object-names-vmware-vsphere
