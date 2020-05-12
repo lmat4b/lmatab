@@ -1,1 +1,19 @@
+======================================================< NOTE >========================================================
+Find more for this custom connection component for SmartConsole and CyberArk in the following URL: https://wp.me/pbTwYg-3s
+This connection component allows you to create a secured and isolated session to manage a CheckPoint firewall using the 
+SmartConsoloe application from CyberArk. This is accomplished by initiating the SmartConsole executable from an AutoIt 
+connection component for the PSM module. The session credentials will be retrieved from a configuration file that will be 
+created every time a user uses this connection component. It will also be removed the moment it is of no use.
 
+====================================================< CONTRIBUTE >===================================================
+Collaboration needed…
+
+I would like to improve the script in different ways:
+
+    Adding any code that improves its efficiency.
+    Any other suggestions are welcome… 
+
+
+=====================================================< RESOURCES >======================================================
+https://community.checkpoint.com/t5/General-Topics/R80-20-Portable-SmartConsole-Tips-and-Tricks/td-p/40602
+https://community.checkpoint.com/t5/General-Management-Topics/SmartConsole-LoginParams/td-p/38914
